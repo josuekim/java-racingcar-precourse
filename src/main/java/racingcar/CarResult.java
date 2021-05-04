@@ -17,8 +17,8 @@ public class CarResult {
         return printPosition.toString();
     }
 
-    public void printMovePosition() {
+    public String printMovePosition() {
         String result = String.format(POSITION_STATE_MESSAGE, car.getCar(), getMovePosition());
-        System.out.println(result);
+        return result;
     }
 }

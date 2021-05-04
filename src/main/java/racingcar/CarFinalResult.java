@@ -20,7 +20,7 @@ public class CarFinalResult {
     }
 
     private void sortCarRanking() {
-        Collections.sort(cars, (s1, s2) -> s1.getPosition() - s2.getPosition());
+        Collections.sort(cars, (s1, s2) -> s2.getPosition() - s1.getPosition());
         maxPosition = cars.get(0).getPosition();
         setWinners();
     }

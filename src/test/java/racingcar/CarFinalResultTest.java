@@ -25,10 +25,10 @@ public class CarFinalResultTest {
         car1.play(1);
         Car car2 = cars.getCars().get(1);
         car2.play(4);
-        car1.play(6);
+        car2.play(6);
         Car car3 = cars.getCars().get(2);
         car3.play(4);
-        car1.play(6);
+        car3.play(6);
 
         CarFinalResult carFinalResult = new CarFinalResult(cars.getCars());
         List<String> winners = carFinalResult.getWinners();

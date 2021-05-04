@@ -4,6 +4,7 @@ public class Car {
     private static final int INIT_POSITION = 0;
     private static final int MIN_NAME_LENGTH = 1;
     private static final int MAX_NAME_LENGTH = 5;
+    private static final int MOVABLE = 4;
     private static final String CAR_NAME_LENGTH_ERROR = "자동차 이름은 1 ~ 5자 사이여야 합니다.";
 
     private final String carName;
@@ -39,7 +40,7 @@ public class Car {
     }
 
     public CarStatus checkMove(int number) {
-        if (number >= 4) {
+        if (number >= MOVABLE) {
             return CarStatus.GO;
         }
         return CarStatus.STOP;

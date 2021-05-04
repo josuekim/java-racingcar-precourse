@@ -11,6 +11,7 @@ public class Car {
     private int position;
 
     public Car(String carName) {
+        carName = trimCarName(carName);
         validateLength(carName);
         this.carName = carName;
         this.position = INIT_POSITION;
@@ -26,6 +27,10 @@ public class Car {
             throw new IllegalArgumentException(CAR_NAME_LENGTH_ERROR);
         }
         return true;
+    }
+
+    public String trimCarName(String carName) {
+        return carName.trim();
     }
 
     public int getPosition() {

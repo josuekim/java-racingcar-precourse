@@ -3,6 +3,7 @@ package racingcar;
 import java.util.*;
 
 public class Cars {
+    private static final String CAR_NAME_DUPLICATE_ERROR = "중복 된 자동차 이름을 입력 하셨습니다.";
     private final List<Car> cars;
 
     public Cars(String inputCars) {
@@ -29,7 +30,7 @@ public class Cars {
             carSet.add(car.getCar());
         }
         if (carSet.size() != carList.size()) {
-            throw new RuntimeException("중복 된 자동차 이름을 입력 하셨습니다.");
+            throw new RuntimeException(CAR_NAME_DUPLICATE_ERROR);
         }
         return true;
     }

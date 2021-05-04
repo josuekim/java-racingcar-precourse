@@ -25,4 +25,20 @@ public class CarTest {
     public void carNameLengthTest() {
         assertThat(car.validateLength(car.getCar())).isTrue();
     }
+
+    @Test
+    @DisplayName("자동차 위치 초기값 테스트")
+    public void initPositionTest() {
+        assertThat(car.getPosition()).isEqualTo(0);
+    }
+
+    @Test
+    @DisplayName("자동차 이동 테스트")
+    public void goAndStopTest() {
+        CarStatus status = car.checkMove(4);
+        assertThat(status).isEqualTo(CarStatus.GO);
+        car.play(4);
+        car.play(1);
+        assertThat(car.getPosition()).isEqualTo(1);
+    }
 }

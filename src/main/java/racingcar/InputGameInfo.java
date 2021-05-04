@@ -23,12 +23,12 @@ public class InputGameInfo {
         RoundNumber roundNumber = null;
         try {
             System.out.println(INPUT_ROUND_MESSAGE);
-            int round = scan.nextInt();
+            String round = scan.nextLine();
             roundNumber = new RoundNumber(round);
+        } catch (NumberFormatException e) {
+            System.out.println(INPUT_ERROR_MESSAGE);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
-        } catch (InputMismatchException e) {
-            System.out.println(INPUT_ERROR_MESSAGE);
         }
 
         return roundNumber;

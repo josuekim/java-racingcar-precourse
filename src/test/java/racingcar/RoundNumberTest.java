@@ -9,7 +9,7 @@ public class RoundNumberTest {
     @Test
     @DisplayName("시도 횟수 1회 이상인지 테스트")
     public void roundNumberTest() {
-        RoundNumber roundNumber = new RoundNumber(5);
+        RoundNumber roundNumber = new RoundNumber("6");
         assertThat(roundNumber.getRound()).isGreaterThan(0);
     }
 }
